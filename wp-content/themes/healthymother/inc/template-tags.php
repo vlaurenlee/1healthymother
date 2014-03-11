@@ -132,15 +132,21 @@ function healthymother_category_transient_flusher() {
 /**
 * Returns all of the categories for a blog post if there was one
 **/
-function healthymother_categories(){
+function healthymother_categories_menu(){
 	
-	$categories = get_the_category();
-	$seperator = ", ";
+	$args = array(
+		'orderby' => 'name',
+		'parent' => 0);
+
+	$categories = get_categories($args);
+	$seperator = "";
 	$output = '';
 	if($categories){
+		$output.= '<ul>'.$seperator;
 		foreach($categories as $category){
-			$output .= '<a href="'.get_category_link($category->term_id).'" title="' .esc_attr(sprintf( __("View all posts in %s"), $category->name ) ) .'">'.$category->cat_name.'</a>'.$seperator;
+			$output .= '<li><a href="'.get_category_link($category->term_id).'" title="' .esc_attr(sprintf( __("View all posts in %s"), $category->name ) ) .'">'.$category->cat_name.'</a></li>'.$seperator;
 		}
+		$output.= '</ul>'.$seperator;
 		echo trim($output, $seperator);
 	}
 }

@@ -33,7 +33,8 @@
 	<nav id="site-navigation" class="main-navigation" role="navigation">
 		<h1 class="menu-toggle"><?php _e( 'Menu', 'healthymother' ); ?></h1>
 		<div class="nav-wrap">
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '', 'items_wrap'=> '%3$s') ); ?>
+			<?php healthymother_categories_menu(); ?>
 		</div>
 		<div class="search-wrap">
 			<?php get_search_form(); ?>
