@@ -132,10 +132,12 @@ input,
 select,
 textarea {
 	color: #404040;
-	font-family: sans-serif;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	font-weight: 300;
 	font-size: 16px;
 	font-size: 1.6rem;
 	line-height: 1.5;
+
 }
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
@@ -222,6 +224,11 @@ span.comments-link a{
 	text-decoration: none;
 	text-transform: uppercase;
 	text-align: right;
+}
+
+.site-info{
+	font-size:12px;
+	text-align: center;
 }
 /*--------------------------------------------------------------
 3.0 Elements
@@ -661,9 +668,7 @@ input.search-submit{
 /*--------------------------------------------------------------
 10.1 Posts and pages
 --------------------------------------------------------------*/
-article{
 
-}
 
 header#masthead{
 	width:900px;
@@ -703,9 +708,7 @@ h1.entry-title a{
 	width:900px;
 	margin: 0 auto;
 }
-div.entry-meta{
 
-}
 
 div.entry-content{
 	font-family: 'Open Sans', Arial, sans-serif;
@@ -786,6 +789,16 @@ footer.entry-footer a{
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+/*div#primary {
+	width:80%;
+	float:left;
+}
+
+div#secondary {
+	width: 20%;
+	float:right;
+}*/
 
 /*--------------------------------------------------------------
 10.2 Asides
