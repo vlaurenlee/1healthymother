@@ -198,6 +198,31 @@ big {
 	font-size: 125%;
 }
 
+h1.site-title a{
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	font-size: 64px;
+	text-align: center;
+	text-decoration: none;
+	color: #3C3C3C;
+}
+
+span.cat-links a{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 13px;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: right;
+}
+
+span.comments-link a{
+	font-weight: 300;
+	font-size: 13px;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: right;
+}
 /*--------------------------------------------------------------
 3.0 Elements
 --------------------------------------------------------------*/
@@ -314,9 +339,14 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-	color: #666;
-	border: 1px solid #ccc;
-	border-radius: 3px;
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-weight: 300;
+	text-transform: uppercase;
+	border: none;
+	color: inherit;
+	border-bottom: 1px solid #404040;
+	text-decoration: none;
+
 }
 input[type="text"]:focus,
 input[type="email"]:focus,
@@ -332,6 +362,8 @@ input[type="url"],
 input[type="password"],
 input[type="search"] {
 	padding: 3px;
+	
+
 }
 textarea {
 	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
@@ -347,10 +379,10 @@ textarea {
 5.1 Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: inherit;
 }
 a:visited {
-	color: purple;
+	color: inherit;
 }
 a:hover,
 a:focus,
@@ -371,7 +403,8 @@ a:active {
 	overflow: hidden;
 	margin: 0 auto;
 	padding: 0;
-	width: 100%;
+	width: 70%;
+	float:right;
 	min-width: 944px;
 
 	z-index:9999;
@@ -390,13 +423,13 @@ a:active {
 .main-navigation {
 	clear: both;
 	display: block;
-	float: left;
 	width: 100%;
 	text-align: center;
 	font-family: 'Open Sans', Arial, sans-serif;
 	font-weight: 300;
 	font-size: 13px;
 	line-height: 26px;
+	height:65px;
 }
 
 .main-navigation ul {
@@ -404,9 +437,8 @@ a:active {
 	text-align: center;
 	width:100%;
 	clear:both;
-	float: none;
 	height: auto;
-	margin: 20px auto;
+	margin: 20px 20px;
 }
 
 .main-navigation li {
@@ -457,11 +489,31 @@ a:active {
 .main-navigation .current_page_item a,
 .main-navigation .current-menu-item a {
 }
+
 /* Small menu */
 .menu-toggle {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: inherit;
 	cursor: pointer;
 	display: none;
+	font-size: 25px;
 }
+
+div.search-wrap{
+	position: fixed;
+	height: 65px;
+	width: 30%;
+	float:right;
+}
+
+
+div.site-branding{
+	border-bottom: 1px solid #777777;
+	padding:20px;
+	height:150px;
+}
+
 @media screen and (max-width: 600px) {
 	.menu-toggle,
 	.main-navigation.toggled .nav-menu {
@@ -588,8 +640,12 @@ a:active {
 	width: 100%
 }
 
-input.search-field {
+.search-form{
+	height: inherit;
+}
 
+input.search-field {
+	margin-top:20px;
 }
 
 input.search-submit{
@@ -616,7 +672,7 @@ header#masthead h1, h2{
 }
 
 header.entry-header{
-	margin-top:30px;
+	margin-top:50px;
 	margin-bottom: 10px;
 	margin-left: 20px;
 	margin-right:20px;
@@ -649,9 +705,9 @@ div.entry-meta{
 }
 
 div.entry-content{
-	font-family: 'Merriweather', Arial, sans-serif;
+	font-family: 'Open Sans', Arial, sans-serif;
 	font-weight: 300;
-	font-size: 22px;
+	font-size: 17px;
 	line-height: 31px;
 
 	text-align: left;

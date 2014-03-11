@@ -5,23 +5,27 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
 	<header class="entry-header">
+	<!-- Title -->
+		<?php healthymother_posted_on(); ?>
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
+	<!-- Metadata -->
 		<div class="entry-meta">
-			<?php healthymother_posted_on(); ?>
+			
 			<!-- Categories -->
 			<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
 				<?php
 					/* translators: used between list items, there is a space after the comma */
-					$categories_list = get_the_category_list( __( '.  ', 'healthymother' ) );
+					$categories_list = get_the_category_list( __( '  ', 'healthymother' ) );
 					if ( $categories_list && healthymother_categorized_blog() ) :
 				?>
-					-
-					<span class="cat-links">
-						<?php printf( __( ' %1$s', 'healthymother' ), $categories_list ); ?>
-					</span>
+					
+				<span class="cat-links">
+					<?php printf( __( '%1$s', 'healthymother' ), $categories_list ); ?>
+				</span>
 				<?php endif; // End if categories ?>
 			<?php endif; ?>
 			<!-- Comments -->
@@ -39,13 +43,13 @@
 	
 	<?php else : ?>	 
 		<div class="entry-content">
-		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'healthymother' ) ); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'healthymother' ),
-				'after'  => '</div>',
-			) );
-		?>
+			<?php echo apply_filters('the_content', $post->post_content); ?>
+			<?php
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . __( 'Pages:', 'healthymother' ),
+					'after'  => '</div>',
+				) );
+			?>
 		</div><!-- .entry-content -->
 	<?php endif;?>
 

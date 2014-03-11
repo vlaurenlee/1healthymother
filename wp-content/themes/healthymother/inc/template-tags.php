@@ -95,6 +95,7 @@ function healthymother_posted_on() {
 }
 endif;
 
+
 /**
  * Returns true if a blog has more than 1 category.
  */
