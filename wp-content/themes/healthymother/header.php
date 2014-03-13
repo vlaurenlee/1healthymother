@@ -20,9 +20,12 @@
 <link href="webfonts/ss-social-circle.css" rel="stylesheet" />
 
 <!--GOOGLE FONT EMBEDS -->
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600|Varela+Round|Merriweather:400,300,300italic,400italic,700|Pontano+Sans' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Alice' rel='stylesheet' type='text/css'>
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300|Pontano+Sans' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
+<!--JS Libraries -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
 <?php wp_head(); ?>
 </head>
@@ -33,8 +36,12 @@
 	<nav id="site-navigation" class="main-navigation" role="navigation">
 		<h1 class="menu-toggle"><?php _e( 'Menu', 'healthymother' ); ?></h1>
 		<div class="nav-wrap">
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '', 'items_wrap'=> '%3$s') ); ?>
-			<?php healthymother_categories_menu(); ?>
+				<?php wp_nav_menu( array(
+				    'container' => '',
+				    'menu_class' => 'dropdown',
+				    'items_wrap' => '<ul id="menu-nav-menu" class="menu nav-menu" >%3$s</ul>',
+				    'depth' => 2
+				) ); ?>
 		</div>
 		<div class="search-wrap">
 			<?php get_search_form(); ?>

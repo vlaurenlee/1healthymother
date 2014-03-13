@@ -29,8 +29,9 @@
 				<?php endif; // End if categories ?>
 			<?php endif; ?>
 			<!-- Comments -->
+			<i class="ss-icon ss-standard">chat</i>
 			<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-				<span class="comments-link"><?php comments_popup_link( __( ' <i class="ss-icon ss-standard">chat</i> No Comments...yet.', 'healthymother' ), __( ' <i class="ss-icon ss-standard">chat</i> 1 Comment', 'healthymother' ), __( ' <i class="ss-icon ss-standard">chat</i> % Comments', 'healthymother' ) ); ?></span>
+				<span class="comments-link"><?php comments_popup_link( __( '  No Comments...yet.', 'healthymother' ), __( '  1 Comment', 'healthymother' ), __( '  % Comments', 'healthymother' ) ); ?></span>
 			<?php endif; ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
@@ -55,11 +56,6 @@
 
 	<footer class="entry-footer">
 		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
-			<div class="social-menu">
-				<a href="#"><i class="ss-icon">facebook</i></a>
-				<a href="#"><i class="ss-icon">twitter</i></a>
-				<a href="#"><i class="ss-icon">pinterest</i></a>
-			</div>
 			<?php
 				/* translators: used between list items, there is a space after the comma */
 				$tags_list = get_the_tag_list( '', __( ', ', 'healthymother' ) );

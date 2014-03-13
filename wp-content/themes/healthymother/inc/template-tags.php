@@ -142,11 +142,9 @@ function healthymother_categories_menu(){
 	$seperator = "";
 	$output = '';
 	if($categories){
-		$output.= '<ul>'.$seperator;
 		foreach($categories as $category){
-			$output .= '<li><a href="'.get_category_link($category->term_id).'" title="' .esc_attr(sprintf( __("View all posts in %s"), $category->name ) ) .'">'.$category->cat_name.'</a></li>'.$seperator;
+			$output .= '<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a href="'.get_category_link($category->term_id).'" title="' .esc_attr(sprintf( __("View all posts in %s"), $category->name ) ) .'">'.$category->cat_name.'</a></li>'.$seperator;
 		}
-		$output.= '</ul>'.$seperator;
 		echo trim($output, $seperator);
 	}
 }

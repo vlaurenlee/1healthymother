@@ -93,6 +93,9 @@ nav,
 section {
 	display: block;
 }
+
+
+
 ol, ul {
 	list-style: none;
 }
@@ -229,6 +232,7 @@ span.comments-link a{
 .site-info{
 	font-size:12px;
 	text-align: center;
+	padding-bottom: 20px;
 }
 /*--------------------------------------------------------------
 3.0 Elements
@@ -369,9 +373,12 @@ input[type="url"],
 input[type="password"],
 input[type="search"] {
 	padding: 3px;
-	
-
 }
+
+main {
+	padding-right:23px;
+}
+
 textarea {
 	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
 	padding-left: 3px;
@@ -387,6 +394,7 @@ textarea {
 --------------------------------------------------------------*/
 a {
 	color: inherit;
+	text-decoration: none;
 }
 a:visited {
 	color: inherit;
@@ -407,12 +415,12 @@ a:active {
 .nav-wrap{
 	display: block !important;
 	height: 65px;
-	overflow: hidden;
+
 	margin: 0 auto;
 	padding: 0;
-	width: 70%;
+	width: 785px;
 	float:right;
-	min-width: 944px;
+	min-width: 680px;
 
 	z-index:9999;
 	position: fixed;
@@ -430,7 +438,8 @@ a:active {
 .main-navigation {
 	clear: both;
 	display: block;
-	width: 100%;
+	width: 950px;
+	margin: 0 auto;
 	text-align: center;
 	font-family: 'Open Sans', Arial, sans-serif;
 	font-weight: 300;
@@ -442,10 +451,9 @@ a:active {
 .main-navigation ul {
 	list-style: none;
 	text-align: center;
-	width:100%;
 	clear:both;
 	height: auto;
-	margin: 20px 20px;
+	margin: 20px 0px;
 }
 
 .main-navigation li {
@@ -466,12 +474,12 @@ a:active {
 	text-transform: uppercase;
 }
 .main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	display: none;
-	float: left;
-	left: 0;
 	position: absolute;
-	top: 1.5em;
+	margin: 9px 0;
+	padding: 0px 9px;
+	width:107px;
+	background-color: #fff;
 	z-index: 99999;
 }
 .main-navigation ul ul ul {
@@ -482,6 +490,10 @@ a:active {
 	width: 200px;
 }
 .main-navigation ul ul li {
+	font-size: 12px;
+	display:block;
+	float:none;
+	height:30px;
 }
 .main-navigation li:hover > a {
 }
@@ -495,6 +507,8 @@ a:active {
 .main-navigation .current_page_item a,
 .main-navigation .current-menu-item a {
 }
+
+
 
 /* Small menu */
 .menu-toggle {
@@ -662,6 +676,37 @@ input.search-submit{
 
 }
 
+select {
+	background-color: #fff;
+	border:none;
+	box-shadow: none;
+	font-size: inherit;
+	font-family: inherit;
+}
+
+aside h3				{ clear:left; font:normal normal 300 14px; 'Open Sans'; margin:0; float:left; width:100%;padding-top: 4px;}
+.archive-list			{ margin:8px 0 3em 0; padding:2px 0 0 0; left:0; float:left; width:100%;}
+.archive-list a			{ color:#4c4c4c; display:block; width:100%; line-height:1; height:14px;}
+.archive-list li		{ height:21px; list-style:none; margin:0 0 2px 0;}
+.archive-list span		{ background:#fdfdfd; padding:0 2px 1px 0;}
+.archive-list .archive-month	{ float:left;}
+.archive-list .archive-count	{ float:left;}
+
+div.sd-content {
+
+}
+
+div.sd-content ul {
+
+}
+
+div.sd-content ul li{
+
+}
+div.sd-content span {
+	font-family: ss-icon;
+}
+
 /*--------------------------------------------------------------
 10.0 Content
 --------------------------------------------------------------*/
@@ -671,7 +716,7 @@ input.search-submit{
 
 
 header#masthead{
-	width:900px;
+	width:950px;
 	margin: 0 auto;
 }
 
@@ -689,7 +734,7 @@ header.entry-header{
 
 h1.entry-title {
 	text-transform: uppercase;
-	font-family: 'Merriweather', Arial, sans-serif;
+	font-family: 'Raleway', Arial, sans-serif;
 	font-weight: 300;
 	font-size: 22px;
 	line-height: 31px;
@@ -702,11 +747,6 @@ h1.entry-title {
 h1.entry-title a{
 	color: #4E4D4D;
 	text-decoration: none;
-}
-
-#content{
-	width:900px;
-	margin: 0 auto;
 }
 
 
@@ -724,7 +764,7 @@ div.entry-content{
 }
 
 span.posted-on a{
-	font-family: 'Alice', serif;
+	font-family: 'Pontano Sans', serif;
 	font-weight: 300;
 	font-size: 14px;
 	line-height: 31px;
@@ -734,8 +774,8 @@ span.posted-on a{
 	color: #A3A2A2;
 }
 span.byline{
-	font-family: 'Alice', serif;
-	font-weight: 300;
+	font-family: 'Pontano Sans', serif;
+	font-weight: 100;
 	font-size: 14px;
 	line-height: 31px;
 
@@ -744,10 +784,37 @@ span.byline{
 	color: #A3A2A2;
 }
 
+
+div.sharedaddy.sd-sharing-enabled{
+	width:100%;
+	margin:0 auto;
+	height:80px;
+}
+
+div.sd-content{
+	width:300px;
+	margin:0 auto;
+	height:inherit;
+}
+
+div.sd-content ul {
+	display:block;
+	list-style: none;
+}
+
+div.sd-content li {
+	display:inline-block;
+	width: 50px;
+}
+
+div.sd-content i {
+	font-size: 30px;
+	margin:3px;
+}
+
 footer.entry-footer{
 	width:100%;
 	margin:0 auto;
-	height:60px;
 	border-bottom:1px solid #ccc;
 }
 
@@ -790,15 +857,26 @@ footer.entry-footer a{
 	margin: 0 0 1.5em;
 }
 
-/*div#primary {
-	width:80%;
+div#content{
+	width:950px;
+	margin: 0 auto;
+}
+
+div#primary {
+	width:75%;
 	float:left;
 }
 
 div#secondary {
-	width: 20%;
+	width: 25%;
 	float:right;
-}*/
+	margin-top:50px;
+}
+
+div#secondary li{
+	text-align: left;
+}
+
 
 /*--------------------------------------------------------------
 10.2 Asides
@@ -806,6 +884,29 @@ div#secondary {
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
 	display: none;
+}
+
+aside{
+	font-size: 13px;
+	text-decoration: none;
+}
+
+aside h1{
+	font-family: 'Raleway', serif; 
+	font-weight: 400;
+	font-size: 14px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+aside ul{
+	list-style: none;
+	margin: 0;
+}
+
+aside a{
+	text-decoration: none;
+	color:inherit;
 }
 
 /*--------------------------------------------------------------

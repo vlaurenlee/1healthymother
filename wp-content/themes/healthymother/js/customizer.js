@@ -33,4 +33,8 @@
 			}
 		} );
 	} );
+
+	//make the jetpacks social plugin look appropriate
+	$('div.sd-content').find('span').addClass('ss-icon');
+	
 } )( jQuery );
