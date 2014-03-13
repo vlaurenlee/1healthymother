@@ -10,7 +10,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
@@ -20,12 +20,14 @@
 <link href="webfonts/ss-social-circle.css" rel="stylesheet" />
 
 <!--GOOGLE FONT EMBEDS -->
-
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300|Pontano+Sans' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 
 <!--JS Libraries -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<!-- CUSTOM JS EMBEDS -->
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/HM-theme.js"></script>
 
 <?php wp_head(); ?>
 </head>
@@ -34,15 +36,16 @@
 <div id="page" class="hfeed site">
 
 	<nav id="site-navigation" class="main-navigation" role="navigation">
-		<h1 class="menu-toggle"><?php _e( 'Menu', 'healthymother' ); ?></h1>
 		<div class="nav-wrap">
-				<?php wp_nav_menu( array(
-				    'container' => '',
-				    'menu_class' => 'dropdown',
-				    'items_wrap' => '<ul id="menu-nav-menu" class="menu nav-menu" >%3$s</ul>',
-				    'depth' => 2
-				) ); ?>
+			<?php wp_nav_menu( array(
+			    'container' => '',
+			    'menu_class' => 'dropdown',
+			    'items_wrap' => '<ul id="menu-nav-menu" class="menu nav-menu" >%3$s</ul>',
+			    'depth' => 2
+			) ); ?>
 		</div>
+		<div class="menu-toggle"><a href="#" id="pull"><?php _e( 'Menu', 'healthymother' ); ?></a></div>
+	
 		<div class="search-wrap">
 			<?php get_search_form(); ?>
 		</div>

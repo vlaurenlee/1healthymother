@@ -229,11 +229,7 @@ span.comments-link a{
 	text-align: right;
 }
 
-.site-info{
-	font-size:12px;
-	text-align: center;
-	padding-bottom: 20px;
-}
+
 /*--------------------------------------------------------------
 3.0 Elements
 --------------------------------------------------------------*/
@@ -413,13 +409,13 @@ a:active {
 }
 
 .nav-wrap{
-	display: block !important;
+	display: block;
 	height: 65px;
 
 	margin: 0 auto;
 	padding: 0;
 	width: 785px;
-	float:right;
+	float:left;
 	min-width: 680px;
 
 	z-index:9999;
@@ -454,6 +450,9 @@ a:active {
 	clear:both;
 	height: auto;
 	margin: 20px 0px;
+	text-align: justify;
+	-ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines;
 }
 
 .main-navigation li {
@@ -462,11 +461,11 @@ a:active {
 	font-size:15px;
 	height: auto;
 	margin:0;
+	margin-right: 45px;
 	padding: 0;
 	height:53px; 
 	text-align: left;
 	vertical-align: middle;
-	width:115px;
 }
 	
 .main-navigation a {
@@ -478,7 +477,7 @@ a:active {
 	position: absolute;
 	margin: 9px 0;
 	padding: 0px 9px;
-	width:107px;
+	width:auto;
 	background-color: #fff;
 	z-index: 99999;
 }
@@ -487,7 +486,6 @@ a:active {
 	top: 0;
 }
 .main-navigation ul ul a {
-	width: 200px;
 }
 .main-navigation ul ul li {
 	font-size: 12px;
@@ -515,10 +513,21 @@ a:active {
 	text-decoration: none;
 	text-transform: uppercase;
 	color: inherit;
-	cursor: pointer;
 	display: none;
 	font-size: 25px;
-	margin-top: 16px;
+	text-align: center;
+	width:100%;
+	position:relative;
+	background-color: #fff;
+	height:inherit;
+}
+
+.menu-toggle a{
+	display:block;
+	width:100%;
+	text-align: center;
+	margin-top:30px;
+	position:relative;
 }
 
 div.search-wrap{
@@ -542,13 +551,29 @@ div.site-branding{
 	height:150px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
 	.menu-toggle,
 	.main-navigation.toggled .nav-menu {
-		display: block;
+		display: none;
 	}
 
-	.main-navigation ul {
+	.main-navigation {
+		width:auto;
+	}
+
+	.main-navigation li{
+		display: block;
+		width: 100%;
+		text-align: center;
+		background-color: #fff;
+	}
+
+	.nav-wrap ul.nav-menu li ul {
+		display: none;
+	}
+
+
+	.search-wrap, .nav-wrap {
 		display: none;
 	}
 }
@@ -784,7 +809,9 @@ span.byline{
 	color: #A3A2A2;
 }
 
-
+/*--------------------------------------------------------------
+10.2 Share Plugin Styles
+--------------------------------------------------------------*/
 div.sharedaddy.sd-sharing-enabled{
 	width:100%;
 	margin:0 auto;
@@ -812,6 +839,9 @@ div.sd-content i {
 	margin:3px;
 }
 
+/*--------------------------------------------------------------
+10.3 Post footer
+--------------------------------------------------------------*/
 footer.entry-footer{
 	width:100%;
 	margin:0 auto;
@@ -857,6 +887,9 @@ footer.entry-footer a{
 	margin: 0 0 1.5em;
 }
 
+/*--------------------------------------------------------------
+10.1 Posts and pages
+--------------------------------------------------------------*/
 div#content{
 	width:950px;
 	margin: 0 auto;
@@ -877,6 +910,16 @@ div#secondary li{
 	text-align: left;
 }
 
+footer.site-footer{
+	width:950px;
+	margin: 0 auto;
+}
+
+footer.site-footer div{
+	font-size:12px;
+	text-align: left;
+	padding-bottom: 20px;
+}
 
 /*--------------------------------------------------------------
 10.2 Asides

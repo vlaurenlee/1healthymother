@@ -32,10 +32,4 @@
 			container.className += ' toggled';
 	};
 
-	//make the jetpacks social plugin look appropriate
-	$('div.sd-content').find('.share-facebook').find('span').replaceWith('<i class="ss-icon">facebook</i>');
-	$('div.sd-content').find('.share-twitter').find('span').replaceWith('<i class="ss-icon">twitter</i>');
-	$('div.sd-content').find('.share-pinterest').find('span').replaceWith('<i class="ss-icon">pinterest</i>');
-	$('div.sd-content').find('.share-email').find('span').replaceWith('<i class="ss-icon">mail</i>');
-
 } )();
