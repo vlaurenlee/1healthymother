@@ -62,7 +62,7 @@ class HM_Archives extends WP_Widget
 		<li>
 			<a href="<?php bloginfo('url') ?>/?m=<?php echo $month->year; ?><?php echo date("m", mktime(0, 0, 0, $month->month, 1, $month->year)) ?>">
 				<span class="archive-month"><?php echo date("F", mktime(0, 0, 0, $month->month, 1, $month->year)) ?></span>
-				<span class="archive-count">   ( <?php echo $month->post_count; ?> )</span>
+				<span class="archive-count">  (<?php echo $month->post_count; ?>)</span>
 			</a>
 		</li>
 	<?php $year_prev = $year_current;

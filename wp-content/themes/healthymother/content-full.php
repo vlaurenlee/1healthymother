@@ -58,14 +58,25 @@
 		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
 			<?php
 				/* translators: used between list items, there is a space after the comma */
-				$tags_list = get_the_tag_list( '', __( ', ', 'healthymother' ) );
+				$tags_list = get_the_tag_list( '', __( '  ', 'healthymother' ) );
 				if ( $tags_list ) :
 			?>
 			<span class="tags-links">
-				<?php printf( __( 'Tagged %1$s', 'healthymother' ), $tags_list ); ?>
+				<?php printf( __( '%1$s', 'healthymother' ), $tags_list ); ?>
 			</span>
 			<?php endif; // End if $tags_list ?>
 		<?php endif; // End if 'post' == get_post_type() ?>
+		<?php
+		if ( function_exists( 'sharing_display' ) ) {
+		    sharing_display( '', true );
+		}
+		 
+		if ( class_exists( 'Jetpack_Likes' ) ) {
+		    $custom_likes = new Jetpack_Likes;
+		    echo $custom_likes->post_likes( '' );
+		}
+		?>
+		
 
 		<?php edit_post_link( __( 'Edit', 'healthymother' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->

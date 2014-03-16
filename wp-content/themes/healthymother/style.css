@@ -120,12 +120,15 @@ a:focus {
 a:hover,
 a:active {
 	outline: 0;
+	color:#ABF1EA;
 }
 a img {
 	border: 0;
 }
 
-
+i {
+	color:#ABF1EA;
+}
 /*--------------------------------------------------------------
 2.0 Typography
 --------------------------------------------------------------*/
@@ -398,7 +401,7 @@ a:visited {
 a:hover,
 a:focus,
 a:active {
-	color: purple;
+	color: #0AD8D8;
 }
 
 /*--------------------------------------------------------------
@@ -466,12 +469,18 @@ a:active {
 	height:53px; 
 	text-align: left;
 	vertical-align: middle;
+	color:#0AD8D8;
 }
 	
 .main-navigation a {
 	text-decoration: none;
 	text-transform: uppercase;
 }
+
+.main-navigation a:hover{
+	text-decoration: underline;
+}
+
 .main-navigation ul ul {
 	display: none;
 	position: absolute;
@@ -738,8 +747,6 @@ div.sd-content span {
 /*--------------------------------------------------------------
 10.1 Posts and pages
 --------------------------------------------------------------*/
-
-
 header#masthead{
 	width:950px;
 	margin: 0 auto;
@@ -766,11 +773,11 @@ h1.entry-title {
 
 	text-align: center;
 	text-decoration: none;
-	color:#4E4D4D;
+	color:#ABF1EA;
 }
 
 h1.entry-title a{
-	color: #4E4D4D;
+	color: #0AD8D8;
 	text-decoration: none;
 }
 
@@ -778,8 +785,8 @@ h1.entry-title a{
 div.entry-content{
 	font-family: 'Open Sans', Arial, sans-serif;
 	font-weight: 300;
-	font-size: 17px;
-	line-height: 31px;
+	font-size: 15px;
+	line-height: 24px;
 	width:662px;
 	margin:21px auto;
 	margin-bottom: 0;
@@ -825,6 +832,7 @@ div.sd-content{
 }
 
 div.sd-content ul {
+	margin: 0;
 	display:block;
 	list-style: none;
 }
@@ -861,8 +869,17 @@ footer.entry-footer i{
 
 footer.entry-footer a{
 	text-decoration: none;
+
+	text-transform: uppercase;
+	font-style: italic;
+	font-size: 12px
 }
 
+a.more-link{
+	background-color: #ABF1EA;
+	padding: 10px;
+	font-family: 'Raleway', Arial, serif;
+}
 
 .sticky {
 }
@@ -887,6 +904,10 @@ footer.entry-footer a{
 	margin: 0 0 1.5em;
 }
 
+span.tags-links {
+	float: right;
+}
+
 /*--------------------------------------------------------------
 10.1 Posts and pages
 --------------------------------------------------------------*/
@@ -895,7 +916,7 @@ div#content{
 	margin: 0 auto;
 }
 
-div#primary {
+.content-area#primary {
 	width:75%;
 	float:left;
 }
@@ -940,6 +961,7 @@ aside h1{
 	font-size: 14px;
 	text-decoration: none;
 	text-transform: uppercase;
+	color:#0AD8D8;
 }
 
 aside ul{
@@ -989,6 +1011,7 @@ aside a{
 	border: 1px solid #ccc;
 	margin-bottom: 1.5em;
 	max-width: 100%;
+	color: #0AD8D8;
 }
 .wp-caption img[class*="wp-image-"] {
 	display: block;

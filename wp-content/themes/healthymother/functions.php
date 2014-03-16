@@ -97,6 +97,34 @@ function healthymother_scripts() {
 add_action( 'wp_enqueue_scripts', 'healthymother_scripts' );
 
 /**
+* Theme Options
+*/
+
+/*
+function healthymother_customize_register( $wp_customize ) {
+   $wp_customize->add_setting( 'header_textcolor' , array(
+    'default'     => '#000000',
+    'transport'   => 'refresh',
+) );
+}
+add_action( 'customize_register', 'healthymother_customize_register' );
+*/
+
+/**
+* Remove the filter which causes the sharedaddy plugin to put share buttons at end of the_content()
+**/
+function jptweak_remove_share() {
+    remove_filter( 'the_content', 'sharing_display',19 );
+    remove_filter( 'the_excerpt', 'sharing_display',19 );
+    if ( class_exists( 'Jetpack_Likes' ) ) {
+        remove_filter( 'the_content', array( Jetpack_Likes::init(), 'post_likes' ), 30, 1 );
+    }
+}
+ 
+add_action( 'loop_start', 'jptweak_remove_share' );
+
+
+/**
  * Implement the Custom Header feature.
  */
 //require get_template_directory() . '/inc/custom-header.php';
